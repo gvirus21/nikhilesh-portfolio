@@ -7,7 +7,7 @@ import Story from "./components/Story";
 
 export default function Home() {
   return (
-    <main className="text-black overflow-x-hidden max-w-400 mx-auto px-4 lg:px-10 xl:px-14">
+    <main className="text-black overflow-x-hidden max-w-400 mx-auto px-4 lg:px-10 xl:px-14 2xl:px-4">
       <Navbar />
       <Hero />
       <Story />
@@ -18,9 +18,9 @@ export default function Home() {
   );
 }
 
-// Add hero secion animation
-// smooth scroll
-// Fix if any responsivness issue.
+// Optimise animation
 
 // add certicicates
+// Fix if any responsivness issue.
+
 // final touch up.
