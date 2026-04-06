@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import Copy from "../Copy";
 import FadeIn from "./FadeIn";
 import { useCursor } from "./CursorProvider";
+import { Button } from "./Button";
 
 export const Hero = () => {
   return (
@@ -73,22 +74,9 @@ const DesktopView = () => {
       </Copy>
 
       <Copy delay={0.8}>
-        <div className="mt-6 lg:mt-10">
-          <a
-            onMouseEnter={() => {
-              setCursorActive(true);
-              setCursorText("Show");
-            }}
-            onMouseLeave={() => {
-              setCursorActive(false);
-              setCursorText("");
-            }}
-            href="#projects"
-            className="inline-flex items-center justify-center px-4 py-1 border border-transparent text-base bg-black text-white rounded-full transition-colors"
-          >
-            View Projects
-          </a>
-        </div>
+        <Button href="#" className="mt-8" cursorText="Open">
+          View Projects
+        </Button>
       </Copy>
     </div>
   );

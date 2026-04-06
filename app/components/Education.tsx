@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useCursor } from "./CursorProvider";
+import { Button } from "./Button";
 
 const certifications = [
   {
@@ -51,8 +51,6 @@ const certifications = [
 ];
 
 const Education = () => {
-  const { setCursorActive, setCursorText } = useCursor();
-
   return (
     <div>
       <div className="border-l-2 border-gray-200 dark:border-zinc-800 pl-6 py-2">
@@ -66,20 +64,9 @@ const Education = () => {
         <p className="mt-1 opacity-60">CGPA: 7.33/10</p>
       </div>
 
-      <Link
-        href="#"
-        onMouseEnter={() => {
-          setCursorActive(true);
-          setCursorText("Open");
-        }}
-        onMouseLeave={() => {
-          setCursorActive(false);
-          setCursorText("");
-        }}
-        className="mt-8 inline-block text-sm bg-black text-white px-4 py-1 rounded-full"
-      >
+      <Button href="#" className="mt-8" cursorText="Open">
         View Certificate
-      </Link>
+      </Button>
     </div>
   );
 };
