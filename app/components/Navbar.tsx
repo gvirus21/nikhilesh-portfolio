@@ -39,21 +39,21 @@ export default function Navbar() {
         <div className="hidden lg:flex gap-3 text-sm">
           <Link
             href="mailto:nikhileshvarasala09@gmail.com"
-            className="hover:text-blue-600 dark:hover:text-white transition-colors"
+            className="hover:text-black/50 active:text-slate-900 transition-colors"
             aria-label="Email"
           >
             E-MAIL
           </Link>
           <Link
             href="#"
-            className="hover:text-blue-600 dark:hover:text-white transition-colors"
+            className="hover:text-black/50 active:text-slate-900  transition-colors"
             aria-label="LinkedIn"
           >
             LINKEDIN
           </Link>
           <Link
             href="#"
-            className="hover:text-blue-600 dark:hover:text-white transition-colors"
+            className="hover:text-black/50 active:text-slate-900  transition-colors"
             aria-label="GitHub"
           >
             GITHUB

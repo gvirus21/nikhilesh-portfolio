@@ -19,8 +19,6 @@ export default function Home() {
 }
 
 
-// optimise cursor
-
 // add certicicates
 // add images
 

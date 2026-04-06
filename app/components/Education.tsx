@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useCursor } from "./CursorProvider";
 
 const certifications = [
   {
@@ -45,49 +48,11 @@ const certifications = [
       </svg>
     ),
   },
-  {
-    name: "Cybersecurity Essentials",
-    org: "Cisco Networking Academy",
-    badge: "Security",
-    color: { bg: "#FFF7ED", accent: "#EA580C" },
-    icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-  },
-  {
-    name: "AWS Cloud Technical Essentials",
-    org: "Amazon Web Services via edX",
-    badge: "Cloud",
-    color: { bg: "#F0F9FF", accent: "#0284C7" },
-    icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-      </svg>
-    ),
-  },
 ];
 
 const Education = () => {
+  const { setCursorActive, setCursorText } = useCursor();
+
   return (
     <div>
       <div className="border-l-2 border-gray-200 dark:border-zinc-800 pl-6 py-2">
@@ -103,6 +68,14 @@ const Education = () => {
 
       <Link
         href="#"
+        onMouseEnter={() => {
+          setCursorActive(true);
+          setCursorText("Open");
+        }}
+        onMouseLeave={() => {
+          setCursorActive(false);
+          setCursorText("");
+        }}
         className="mt-8 inline-block text-sm bg-black text-white px-4 py-1 rounded-full"
       >
         View Certificate
@@ -112,12 +85,22 @@ const Education = () => {
 };
 
 const Certifications = () => {
+  const { setCursorActive, setCursorText } = useCursor();
+
   return (
-    <div className="flex flex-col gap-3 mt-1 xl:w-5/12">
+    <div className="flex flex-col gap-3 mt-1 xl:w-4/12">
       {certifications.map((cert) => (
         <div
           key={cert.name}
-          className="group bg-white rounded-2xl px-4 py-5 flex items-start gap-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] cursor-default"
+          onMouseEnter={() => {
+            setCursorActive(true);
+            setCursorText("Show");
+          }}
+          onMouseLeave={() => {
+            setCursorActive(false);
+            setCursorText("");
+          }}
+          className="group bg-white rounded-2xl px-4 py-5 flex items-start gap-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] cursor-pointer"
         >
           {/* Icon */}
           <div
