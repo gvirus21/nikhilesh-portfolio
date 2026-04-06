@@ -63,12 +63,12 @@ export default function CursorProvider({
       {children}
       <div
         ref={cursorRef}
-        className="pointer-events-none fixed top-0 left-0 z-9999 hidden sm:flex items-center justify-center -translate-x-1/2 -translate-y-1/2"
+        className="pointer-events-none fixed top-0 left-0 z-9999 hidden sm:flex items-center justify-center -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
       >
         <div
           className={`flex items-center justify-center rounded-full transition-all duration-300 ease-out ${
             cursorActive
-              ? "h-16 w-16 bg-black text-white scale-100 opacity-80"
+              ? "h-16 w-16 bg-white text-black scale-100 opacity-80"
               : "h-0 w-0 bg-transparent scale-50 opacity-0"
           }`}
         >
