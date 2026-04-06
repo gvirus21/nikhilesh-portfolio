@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useCursor } from "./CursorProvider";
 
 const projects = [
   {
@@ -44,8 +47,20 @@ interface Project {
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {
+  const { setCursorActive, setCursorText } = useCursor();
+
   return (
-    <div className="xl:min-h-160 md:w-110 lg:w-160 xl:w-[26vw] 2xl:w-md p-4 lg:p-8 pb-10 md:pb-12 lg:pb-20 xl:p-4 bg-[#f5f5f5] rounded-3xl border-white/40 inset-shadow-sm border-14 shadow-2xl">
+    <div
+      onMouseEnter={() => {
+        setCursorActive(true);
+        setCursorText("Open");
+      }}
+      onMouseLeave={() => {
+        setCursorActive(false);
+        setCursorText("");
+      }}
+      className="xl:min-h-160 md:w-110 lg:w-160 xl:w-[26vw] 2xl:w-md p-4 lg:p-8 pb-10 md:pb-12 lg:pb-20 xl:p-4 bg-[#f5f5f5] rounded-3xl border-white/40 inset-shadow-sm border-14 shadow-2xl"
+    >
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-4 sm:gap-2">
         <h3 className="text-4xl md:text-5xl lg:text-7xl xl:text-[2.5vw] 2xl:text-[2.5rem] tracking-tighter">
           {project.title}

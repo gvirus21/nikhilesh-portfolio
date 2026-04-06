@@ -18,9 +18,11 @@ export default function Home() {
   );
 }
 
-// Optimise animation
+
+// optimise cursor
 
 // add certicicates
-// Fix if any responsivness issue.
+// add images
 
+// Fix if any responsivness issue.
 // final touch up.
