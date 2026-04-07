@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { HiOutlineMenuAlt4 as Menu } from "react-icons/hi";
 import { IoCloseOutline as Close } from "react-icons/io5";
 
-export default function Navbar() {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Prevent scrolling when the full-screen menu is active
@@ -107,3 +107,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;

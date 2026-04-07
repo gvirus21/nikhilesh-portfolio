@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCursor } from "./CursorProvider";
+import { useCursor } from "../providers/CursorProvider";
 
 const projects = [
   {
@@ -88,7 +88,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   );
 };
 
-export default function Projects() {
+export const Projects = () => {
   return (
     <section className="pt-24 lg:pt-40">
       <div>
@@ -106,3 +106,5 @@ export default function Projects() {
     </section>
   );
 }
+
+export default Projects;

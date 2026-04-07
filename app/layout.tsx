@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "./components/SmoothScroll";
-import CursorProvider from "./components/CursorProvider";
+import SmoothScroll from "./components/animations/SmoothScroll";
+import CursorProvider from "./components/providers/CursorProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CursorProvider>
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
+          <SmoothScroll>{children}</SmoothScroll>
         </CursorProvider>
       </body>
     </html>

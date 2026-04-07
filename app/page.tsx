@@ -1,9 +1,5 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
-import Story from "./components/Story";
+import { Hero, Story, EducationSection, Projects, Contact } from "./components/sections";
+import { Navbar } from "./components/layout/Navbar";
 
 export default function Home() {
   return (
@@ -11,17 +7,16 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Story />
-      <Education />
+      <EducationSection />
       <Projects />
       <Contact />
     </main>
   );
 }
 
-
-
 // add certicicates
 // add images
+// organise the folder strucure.
 
 // Fix if any responsivness issue.
 // final touch up.

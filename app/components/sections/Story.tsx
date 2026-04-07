@@ -1,6 +1,7 @@
-import Copy from "../Copy";
+import Copy from "../ui/Copy";
+import Image from "next/image";
 
-const Story = () => {
+export const Story = () => {
   return (
     <div className="pt-32 lg:pt-40">
       <Copy delay={0.1}>
@@ -29,7 +30,9 @@ const Story = () => {
           </Copy>
         </div>
 
-        <div className=" h-[30vh] md:h-[36vh] xl:h-[70vh] xl:max-h-140 2xl:max-h-180 bg-slate-400 aspect-video 2xl:aspect-18/9 mt-12 lg:mt-20 xl:mt-32 rounded-[12px] lg:rounded-[20px] xl:rounded-[20px]"></div>
+        <div className="relative h-[30vh] md:h-[36vh] xl:h-[70vh] xl:max-h-140 2xl:max-h-180 bg-slate-400 aspect-video 2xl:aspect-18/9 mt-12 lg:mt-20 xl:mt-32 rounded-[12px] lg:rounded-[20px] xl:rounded-[20px] overflow-hidden">
+          <Image src="/assets/images/about_image.JPG" alt="About Nikhilesh" fill className="object-cover" />
+        </div>
       </div>
     </div>
   );

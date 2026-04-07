@@ -1,7 +1,7 @@
 "use client";
 
-import { useCursor } from "./CursorProvider";
-import { Button } from "./Button";
+import { useCursor } from "../providers/CursorProvider";
+import { Button } from "../ui/Button";
 
 const certifications = [
   {
@@ -118,7 +118,7 @@ const Certifications = () => {
   );
 };
 
-export default function EducationSection() {
+export const EducationSection = () => {
   return (
     <section className="pt-24 lg:pt-40">
       <h2 className="text-5xl md:text-6xl lg:text-8xl xl:text-7xl tracking-[-3px]">
@@ -133,3 +133,5 @@ export default function EducationSection() {
     </section>
   );
 }
+
+export default EducationSection;

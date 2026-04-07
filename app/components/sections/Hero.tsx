@@ -1,9 +1,10 @@
 "use client";
 
-import Copy from "../Copy";
-import FadeIn from "./FadeIn";
-import { useCursor } from "./CursorProvider";
-import { Button } from "./Button";
+import Copy from "../ui/Copy";
+import FadeIn from "../animations/FadeIn";
+import { useCursor } from "../providers/CursorProvider";
+import { Button } from "../ui/Button";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -30,7 +31,9 @@ export const Hero = () => {
             delay={0.6}
             className="flex justify-center md:justify-end w-full md:w-8/12 lg:w-10/12 -mt-18 sm:mt-0 -z-10 md:z-0"
           >
-            <div className="relative aspect-square w-full max-w-md sm:max-w-[24rem] xl:max-w-130 rounded-[5%] overflow-hidden shadow-2xl bg-slate-400 flex items-center justify-center"></div>
+            <div className="relative aspect-square w-full max-w-md sm:max-w-[24rem] xl:max-w-130 rounded-[5%] overflow-hidden shadow-2xl bg-slate-400 flex items-center justify-center">
+              <Image src="/assets/images/hero_image.JPG" alt="Nikhilesh Hero" fill className="object-cover" priority />
+            </div>
           </FadeIn>
 
           <MobileView />

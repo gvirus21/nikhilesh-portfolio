@@ -1,8 +1,8 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
-import Copy from "../Copy";
+import Copy from "../ui/Copy";
 
-export default function Contact() {
+export const Contact = () => {
   return (
     <footer className="flex justify-center items-center pt-32 lg:pt-48 pb-4">
       <div className="w-[90%] sm:w-[80%] md:w-[70%] xl:w-[50%] 2xl:w-[45%] mx-auto text-center">
@@ -88,3 +88,5 @@ const ContactLinks = () => (
     </Link>
   </div>
 );
+
+export default Contact;
