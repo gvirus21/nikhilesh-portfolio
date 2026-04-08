@@ -5,9 +5,10 @@ import { Button } from "../ui/Button";
 
 const certifications = [
   {
-    name: "Certified Data Science Professional",
-    org: "Odin School",
+    name: "Data Science Professional Certification",
+    org: "OdinSchool Bootcamp",
     badge: "Data Science",
+    url: "/assets/certificates/odinschool-data-science-certificate.pdf",
     color: { bg: "#EEF2FF", accent: "#4F46E5" },
     icon: (
       <svg
@@ -27,9 +28,10 @@ const certifications = [
     ),
   },
   {
-    name: "Introduction to SQL",
-    org: "IBM via edX",
-    badge: "Database",
+    name: "SQL & Databases Certification",
+    org: "IBM (via edX)",
+    badge: "Database & SQL",
+    url: "/assets/certificates/ibm-sql-certificate.pdf",
     color: { bg: "#F0FDF4", accent: "#16A34A" },
     icon: (
       <svg
@@ -64,7 +66,7 @@ const Education = () => {
         <p className="mt-1 opacity-60">CGPA: 7.33/10</p>
       </div>
 
-      <Button href="#" className="mt-8" cursorText="Open">
+      <Button href="/assets/certificates/btech-certificate.pdf" target="_blank" className="mt-8" cursorText="Open">
         View Certificate
       </Button>
     </div>
@@ -77,7 +79,10 @@ const Certifications = () => {
   return (
     <div className="flex flex-col gap-3 mt-1 xl:w-4/12">
       {certifications.map((cert) => (
-        <div
+        <a
+          href={cert.url}
+          target="_blank"
+          rel="noopener noreferrer"
           key={cert.name}
           onMouseEnter={() => {
             setCursorActive(true);
@@ -112,7 +117,7 @@ const Certifications = () => {
           >
             {cert.badge}
           </span>
-        </div>
+        </a>
       ))}
     </div>
   );

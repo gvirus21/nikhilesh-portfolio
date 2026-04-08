@@ -10,10 +10,11 @@ interface ButtonProps {
   className?: string;
   cursorText?: string;
   style?: React.CSSProperties;
+  target?: string;
 }
 
 export const Button = forwardRef<HTMLAnchorElement, ButtonProps>(
-  ({ href, children, className = "", cursorText = "Open", style }, ref) => {
+  ({ href, children, className = "", cursorText = "Open", style, target }, ref) => {
     const { setCursorActive, setCursorText } = useCursor();
 
     return (
@@ -21,6 +22,7 @@ export const Button = forwardRef<HTMLAnchorElement, ButtonProps>(
         href={href}
         ref={ref}
         style={style}
+        target={target}
         onMouseEnter={() => {
           setCursorActive(true);
           setCursorText(cursorText);
