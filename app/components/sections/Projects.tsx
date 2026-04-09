@@ -59,10 +59,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
         setCursorActive(false);
         setCursorText("");
       }}
-      className="xl:min-h-160 md:w-110 lg:w-160 xl:w-[26vw] 2xl:w-md p-4 lg:p-8 pb-10 md:pb-12 lg:pb-20 xl:p-4 bg-[#f5f5f5] rounded-3xl border-white/40 inset-shadow-sm border-14 shadow-2xl"
+      className="xl:min-h-150 md:w-110 lg:w-160 xl:w-[28vw] 2xl:w-md p-4 pb-10 md:pb-12 lg:pb-20 xl:p-3 bg-[#f5f5f5] rounded-3xl border-white/40 inset-shadow-sm border-14 shadow-2xl"
     >
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-4 sm:gap-2">
-        <h3 className="text-4xl md:text-5xl lg:text-7xl xl:text-[2.5vw] 2xl:text-[2.5rem] tracking-tighter">
+        <h3 className="text-4xl md:text-5xl lg:text-7xl xl:text-[2.6vw] 2xl:text-[2.5rem] tracking-tighter">
           {project.title}
         </h3>
       </div>
@@ -70,7 +70,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         {project.tech.split(",").map((item, idx) => (
           <div
             key={idx}
-            className="flex justify-center items-center bg-[#D5FF5F] shadow-xl px-3 py-1 text-sm lg:text-xl xl:text-[1rem] text-black rounded-full uppercase whitespace-nowrap"
+            className="flex justify-center items-center bg-[#D5FF5F] shadow-xl px-3 py-1 text-sm lg:text-xl xl:text-sm text-black rounded-full uppercase whitespace-nowrap"
           >
             <p>{item.trim()}</p>
           </div>
@@ -92,10 +92,10 @@ export const Projects = () => {
   return (
     <section className="pt-24 lg:pt-40">
       <div>
-        <h2 className="text-6xl md:text-8xl lg:text-9xl xl:text-8xl font-thin tracking-[-4px] md:tracking-[-6px] xl:tracking-[-7px]">
+        <h2 className="text-6xl md:text-8xl lg:text-9xl xl:text-7xl font-thin tracking-[-4px] md:tracking-[-6px] xl:tracking-[-4px]">
           Projects
         </h2>
-        <div className="flex flex-col lg:flex-row flex-wrap gap-4 md:gap-6 lg:gap-10 xl:gap-8 justify-center items-center xl:justify-center xl:items-start mt-10 lg:mt-24 mx-auto">
+        <div className="flex flex-col lg:flex-row flex-wrap gap-4 md:gap-6 lg:gap-10 xl:gap-8 justify-center items-center xl:justify-between xl:items-start mt-10 xl:mt-18 mx-5">
           {projects.map((project, index) => (
             <Link href={project.github} key={index} className="inline-block">
               <ProjectCard project={project} />
@@ -105,6 +105,6 @@ export const Projects = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Projects;

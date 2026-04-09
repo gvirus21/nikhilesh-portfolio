@@ -55,15 +55,15 @@ const certifications = [
 const Education = () => {
   return (
     <div>
-      <div className="border-l-2 border-gray-200 dark:border-zinc-800 pl-6 py-2">
-        <h3 className="text-3xl md:text-3xl xl:text-4xl tracking-tighter">
+      <div className="border-l border-gray-200 dark:border-zinc-800 pl-6 py-1">
+        <h3 className="text-3xl md:text-3xl xl:text-2xl tracking-tighter">
           B.Tech, Artificial Intelligence & Data Science
         </h3>
-        <p className="mt-4 text-xl tracking-tight opacity-60">
+        <p className="mt-4 text-md tracking-tight opacity-60">
           Vignan&apos;s Institute of Information Technology
         </p>
-        <p className="text-lg mt-1  opacity-60">(2021 - 2025)</p>
-        <p className="mt-1 opacity-60">CGPA: 7.33/10</p>
+        <p className="text-md mt-1  opacity-60">(2021 - 2025)</p>
+        <p className="mt-1 text-sm opacity-60">CGPA: 7.33/10</p>
       </div>
 
       <Button href="/assets/certificates/btech-certificate.pdf" target="_blank" className="mt-8" cursorText="Open">
@@ -96,7 +96,7 @@ const Certifications = () => {
         >
           {/* Icon */}
           <div
-            className="w-12 h-12 rounded-xl flex items-center justify-center "
+            className="w-10 h-10 rounded-xl flex items-center justify-center "
             style={{ backgroundColor: cert.color.bg, color: cert.color.accent }}
           >
             {cert.icon}
@@ -126,13 +126,13 @@ const Certifications = () => {
 export const EducationSection = () => {
   return (
     <section className="pt-24 lg:pt-40">
-      <h2 className="text-5xl md:text-6xl lg:text-8xl xl:text-7xl tracking-[-3px]">
+      <h2 className="text-5xl md:text-6xl lg:text-8xl xl:text-6xl tracking-[-3px]">
         <span>Education &</span>
         <br /> Certifications
       </h2>
       <div className="mx-auto flex flex-col xl:flex-row justify-between gap-12 mt-8 lg:mt-14 w-full">
         <Education />
-        <div className="xl:hidden h-0.5 w-full bg-black/5"></div>
+        <div className="xl:hidden h-0.2 w-full bg-black/5"></div>
         <Certifications />
       </div>
     </section>

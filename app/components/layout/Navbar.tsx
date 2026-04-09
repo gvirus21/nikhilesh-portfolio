@@ -23,7 +23,7 @@ export const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-2 bg-[#f5f5f5]">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-2 bg-[#f5f5f5]">
       <div className="flex justify-between items-center w-full relative z-50">
         <div className="">
           <Link
@@ -45,14 +45,14 @@ export const Navbar = () => {
             E-MAIL
           </Link>
           <Link
-            href="#"
+            href="https://www.linkedin.com/in/nikhilesh-varasala/"
             className="hover:text-black/50 active:text-slate-900  transition-colors"
             aria-label="LinkedIn"
           >
             LINKEDIN
           </Link>
           <Link
-            href="#"
+            href="https://github.com/Nikhilesh264"
             className="hover:text-black/50 active:text-slate-900  transition-colors"
             aria-label="GitHub"
           >

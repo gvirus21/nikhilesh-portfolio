@@ -2,7 +2,6 @@
 
 import Copy from "../ui/Copy";
 import FadeIn from "../animations/FadeIn";
-import { useCursor } from "../providers/CursorProvider";
 import { Button } from "../ui/Button";
 import Image from "next/image";
 
@@ -18,7 +17,7 @@ export const Hero = () => {
                 Hello, Iam
               </h1>
             </Copy>
-            <Copy delay={0.3}>
+            <Copy delay={0.2}>
               <h1 className="text-[22vw] md:text-[10vw] xl:text-[8vw] tracking-tighter text-center -mt-6 xl:-mt-10 2xl:-mt-20">
                 Nikhilesh
               </h1>
@@ -28,11 +27,17 @@ export const Hero = () => {
 
           {/* Placeholder Image */}
           <FadeIn
-            delay={0.6}
+            delay={0.4}
             className="flex justify-center md:justify-end w-full md:w-8/12 lg:w-10/12 -mt-18 sm:mt-0 -z-10 md:z-0"
           >
             <div className="relative aspect-square w-full max-w-md sm:max-w-[24rem] xl:max-w-130 rounded-[5%] overflow-hidden shadow-2xl bg-slate-400 flex items-center justify-center">
-              <Image src="/assets/images/hero_image.JPG" alt="Nikhilesh Hero" fill className="object-cover" priority />
+              <Image
+                src="/assets/images/hero_image.JPG"
+                alt="Nikhilesh Hero"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </FadeIn>
 
@@ -48,9 +53,11 @@ export default Hero;
 const MobileView = () => (
   <div className="sm:hidden">
     <p className="text-2xl mt-4 text-justify px-4">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ea
-      accusantium inventore autem consequuntur possimus consectetur dolorem
-      libero. Minus neque suscipit fugit est iste ad.
+      I help businesses make better decisions using data—not assumptions. I
+      specialize in breaking down complex datasets into clear, actionable
+      insights that improve performance, reduce waste, and drive measurable
+      results Instead of just building dashboards, I focus on answering one
+      question: “What should we do next based on this data?
     </p>
 
     <div className="pt-2">
@@ -65,14 +72,13 @@ const MobileView = () => (
 );
 
 const DesktopView = () => {
-  const { setCursorActive, setCursorText } = useCursor();
   return (
     <div className="hidden sm:flex flex-col items-start">
       <Copy delay={0.5}>
-        <p className="text-lg md:text-xl xl:text-xl 3xl:text-2xl w-full xl:w-lg 3xl:w-[37.5rem] text-left inline-block">
-          I&apos;m Gourav Kumar, a Web designer & Developer based in India. I
-          like to solve design problems for businesses & Startups to elevate
-          their business needs via website.
+        <p className="text-lg md:text-xl xl:text-xl 3xl:text-2xl w-full xl:w-135 2xl:w-170 text-left inline-block">
+          I help businesses make better decisions using data not assumptions. I
+          specialize in breaking down complex datasets into clear, actionable
+          insights that improve performance, reduce waste, and drive results.
         </p>
       </Copy>
 
