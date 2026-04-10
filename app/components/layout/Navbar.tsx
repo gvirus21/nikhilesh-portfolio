@@ -91,14 +91,14 @@ export const Navbar = () => {
       >
         <div className="relative flex justify-between items-center gap-10 text-2xl">
           <Link
-            href="#"
+            href="https://www.linkedin.com/in/nikhilesh-varasala/"
             className="hover:text-blue-600 dark:hover:text-white transition-colors"
             onClick={() => setIsOpen(false)}
           >
             LINKEDIN
           </Link>
           <Link
-            href="#"
+            href="https://github.com/Nikhilesh264"
             className="hover:text-blue-600 dark:hover:text-white transition-colors -ml-10"
             onClick={() => setIsOpen(false)}
           >
