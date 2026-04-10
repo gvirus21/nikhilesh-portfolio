@@ -72,6 +72,15 @@ export const Navbar = () => {
         </div>
       </div>
 
+      {/* Background Blur Overlay for the rest of the page */}
+      <div
+        className={`fixed inset-0 bg-white/30 blur-xl z-30 lg:hidden transition-all duration-500 ease-in-out ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setIsOpen(false)}
+        aria-hidden="true"
+      />
+
       {/* Mobile Full-Screen Menu Overlay */}
       <div
         className={`fixed inset-0 text-2xl tracking-tight h-[32vh] backdrop-blur-xl shadow-2xl  bg-white z-40 lg:hidden flex flex-col pt-22 px-4 transition-all duration-500 ease-in-out ${
