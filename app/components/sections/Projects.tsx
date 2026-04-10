@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Amazon Sales Performance Analysis",
     tech: "SQL, MySQL, Power BI",
-    github: "#", // Replace with actual link
+    github: "https://github.com/Nikhilesh264/amazon-sales-analysis",
     points: [
       "Consolidated 1,000+ multi-branch sales records into structured analytical tables for revenue and pricing analysis",
       "Designed KPI framework tracking revenue contribution, pricing impact, and demand shifts across segments",
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Supplier Quality & Procurement Analytics Platform",
     tech: "Power BI, DAX, Power Query",
-    github: "#",
+    github: " https://github.com/Nikhilesh264/coffee-quality-powerbi-analysis",
     points: [
       "Analyzed 1,300+ supplier samples to evaluate defect rates, cost efficiency, and sourcing reliability",
       "Applied correlation analysis to measure defect impact on supplier performance scoring",
@@ -29,7 +29,8 @@ const projects = [
   {
     title: "Operational Performance & Risk Monitoring Dashboard",
     tech: "Python, Pandas, Streamlit",
-    github: "#",
+    github:
+      "https://github.com/Nikhilesh264/authentication-analytics-dashboard",
     points: [
       "Processed and cleaned 15,000+ operational event logs to analyze usage trends and peak load behavior",
       "Engineered KPIs for system efficiency, anomaly frequency, and operational bottlenecks",
@@ -90,7 +91,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
 export const Projects = () => {
   return (
-    <section id="projects" className="pt-24 lg:pt-40 3xl:pt-60 max-w-550 mx-auto">
+    <section
+      id="projects"
+      className="pt-24 lg:pt-40 3xl:pt-60 max-w-550 mx-auto"
+    >
       <div>
         <h2 className="text-6xl md:text-8xl lg:text-9xl xl:text-7xl 3xl:text-8xl font-thin tracking-[-4px] md:tracking-[-6px] xl:tracking-[-4px] 3xl:tracking-[-6px]">
           Projects
