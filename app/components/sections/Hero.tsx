@@ -53,9 +53,7 @@ export default Hero;
 const MobileView = () => (
   <div className="sm:hidden">
     <p className="text-lg mt-6 text-justify">
-      I help businesses make better decisions using data not assumptions. I
-      specialize in breaking down complex datasets into clear, actionable
-      insights that improve performance, reduce waste, and drive results.
+      Data Analyst | Driving Revenue & Operational Insights
     </p>
 
     <div className="pt-2">
@@ -73,13 +71,23 @@ const DesktopView = () => {
   return (
     <div className="hidden sm:flex flex-col items-start">
       <Copy delay={0.5}>
-        <p className="text-lg md:text-lg xl:text-xl 3xl:text-xl w-11/12 xl:w-135 2xl:w-155 3xl:w-155 text-left inline-block">
-          I help businesses make better decisions using data not assumptions. I
-          specialize in breaking down complex datasets into clear, actionable
-          insights that improve performance, reduce waste, and drive results.
+        <p className="text-lg md:text-lg xl:text-2xl 3xl:text-2xl w-11/12 xl:w-120 2xl:w-155 3xl:w-155 text-left inline-block -mt-4">
+          Data Analyst | Driving Revenue & Operational Insights
         </p>
       </Copy>
 
+      <Copy delay={0.6}>
+        <p className="text-lg md:text-lg xl:text-2xl 3xl:text-2xl w-11/12 xl:w-120 2xl:w-155 3xl:w-155 text-left inline-block -mt-4">
+          Identified 12% revenue leakage and reduced reporting effort by 70%
+          using SQL, Python, and Power BI
+        </p>
+      </Copy>
+
+      <Copy delay={0.8}>
+        <Button href="#projects" className="mt-8" cursorText="Check">
+          Download Resume
+        </Button>
+      </Copy>
       <Copy delay={0.8}>
         <Button href="#projects" className="mt-8" cursorText="Check">
           View Projects

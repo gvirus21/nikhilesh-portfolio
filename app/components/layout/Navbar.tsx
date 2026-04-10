@@ -23,12 +23,12 @@ export const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-6 md:py-3 xl:py-2 bg-[#f5f5f5]">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-10 py-6 md:py-3 xl:py-4 bg-[#f5f5f5]">
       <div className="flex justify-between items-center w-full relative z-50">
         <div className="">
           <Link
             href="/"
-            className="text-sm md:text-base lg:text-sm tracking-tighter uppercase"
+            className="text-sm md:text-lg lg:text-lg tracking-tighter uppercase"
             onClick={() => setIsOpen(false)}
           >
             Nikhilesh Varasala
@@ -36,7 +36,7 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-3 text-sm md:text-base">
+        <div className="hidden md:flex gap-3 text-sm md:text-xl">
           <Link
             href="mailto:nikhileshvarasala09@gmail.com"
             className="hover:text-black/50 active:text-slate-900 transition-colors"
