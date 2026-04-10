@@ -54,19 +54,24 @@ const certifications = [
 
 const Education = () => {
   return (
-    <div>
+    <div className="">
       <div className="border-l border-gray-200 dark:border-zinc-800 pl-6 py-1">
         <h3 className="text-3xl md:text-3xl xl:text-2xl tracking-tighter">
           B.Tech, Artificial Intelligence & Data Science
         </h3>
-        <p className="mt-4 text-md tracking-tight opacity-60">
+        <p className="mt-2 text-md tracking-tight opacity-60">
           Vignan&apos;s Institute of Information Technology
         </p>
         <p className="text-md mt-1  opacity-60">(2021 - 2025)</p>
         <p className="mt-1 text-sm opacity-60">CGPA: 7.33/10</p>
       </div>
 
-      <Button href="/assets/certificates/btech-certificate.pdf" target="_blank" className="mt-8" cursorText="Open">
+      <Button
+        href="/assets/certificates/btech-certificate.pdf"
+        target="_blank"
+        className="mt-8"
+        cursorText="Open"
+      >
         View Certificate
       </Button>
     </div>
@@ -125,8 +130,8 @@ const Certifications = () => {
 
 export const EducationSection = () => {
   return (
-    <section className="pt-24 lg:pt-40">
-      <h2 className="text-5xl md:text-6xl lg:text-8xl xl:text-6xl tracking-[-3px]">
+    <section className="pt-24 lg:pt-40 3xl:pt-70 max-w-550 mx-auto">
+      <h2 className="text-5xl md:text-6xl lg:text-8xl xl:text-6xl 3xl:text-8xl tracking-[-3px] 3xl:leading-20">
         <span>Education &</span>
         <br /> Certifications
       </h2>
@@ -137,6 +142,6 @@ export const EducationSection = () => {
       </div>
     </section>
   );
-}
+};
 
 export default EducationSection;

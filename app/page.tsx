@@ -3,7 +3,7 @@ import { Navbar } from "./components/layout/Navbar";
 
 export default function Home() {
   return (
-    <main className="text-black overflow-x-hidden max-w-400 mx-auto px-4 lg:px-10 xl:px-14 2xl:px-4">
+    <main className="text-black overflow-x-hidden mx-auto px-4 lg:px-10 xl:px-12 2xl:px-14">
       <Navbar />
       <Hero />
       <Story />
@@ -14,9 +14,5 @@ export default function Home() {
   );
 }
 
-// add certicicates
-// add images
-// organise the folder strucure.
-
-// Fix if any responsivness issue.
-// final touch up.
+// fix view projects button
+// fix desktop scren
