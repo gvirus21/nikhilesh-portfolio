@@ -83,7 +83,7 @@ const DesktopView = () => {
       </Copy>
 
       <Copy delay={0.8}>
-        <Button href="#" className="mt-8" cursorText="Open">
+        <Button href="#projects" className="mt-8" cursorText="Check">
           View Projects
         </Button>
       </Copy>

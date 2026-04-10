@@ -90,7 +90,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
 export const Projects = () => {
   return (
-    <section className="pt-24 lg:pt-40 3xl:pt-60 max-w-550 mx-auto">
+    <section id="projects" className="pt-24 lg:pt-40 3xl:pt-60 max-w-550 mx-auto">
       <div>
         <h2 className="text-6xl md:text-8xl lg:text-9xl xl:text-7xl 3xl:text-8xl font-thin tracking-[-4px] md:tracking-[-6px] xl:tracking-[-4px] 3xl:tracking-[-6px]">
           Projects

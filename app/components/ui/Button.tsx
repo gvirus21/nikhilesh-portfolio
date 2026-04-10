@@ -4,6 +4,8 @@ import React, { forwardRef } from "react";
 import Link from "next/link";
 import { useCursor } from "@/app/components/providers/CursorProvider";
 
+import { useLenis } from "lenis/react";
+
 interface ButtonProps {
   href: string;
   children: React.ReactNode;
@@ -16,6 +18,20 @@ interface ButtonProps {
 export const Button = forwardRef<HTMLAnchorElement, ButtonProps>(
   ({ href, children, className = "", cursorText = "Open", style, target }, ref) => {
     const { setCursorActive, setCursorText } = useCursor();
+    const lenis = useLenis();
+
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (href.startsWith("#") && lenis) {
+        e.preventDefault();
+        const target = document.querySelector(href) as HTMLElement;
+        if (target) {
+          lenis.scrollTo(target, {
+            duration: 1.8,
+            easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+          });
+        }
+      }
+    };
 
     return (
       <Link
@@ -23,6 +39,8 @@ export const Button = forwardRef<HTMLAnchorElement, ButtonProps>(
         ref={ref}
         style={style}
         target={target}
+        scroll={!href.startsWith("#")}
+        onClick={handleClick}
         onMouseEnter={() => {
           setCursorActive(true);
           setCursorText(cursorText);
