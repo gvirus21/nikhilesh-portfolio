@@ -14,5 +14,5 @@ export default function Home() {
   );
 }
 
-// fix view projects button
-// fix desktop scren
+// fix view projects button bug
+// mobile screen 

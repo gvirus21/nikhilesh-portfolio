@@ -55,8 +55,8 @@ const certifications = [
 const Education = () => {
   return (
     <div className="">
-      <div className="border-l border-gray-200 dark:border-zinc-800 pl-6 py-1">
-        <h3 className="text-3xl md:text-3xl xl:text-2xl tracking-tighter">
+      <div className="border-l border-gray-200 dark:border-zinc-800 pl-3 xl:pl-6 py-1">
+        <h3 className="text-2xl md:text-3xl xl:text-2xl tracking-tighter">
           B.Tech, Artificial Intelligence & Data Science
         </h3>
         <p className="mt-2 text-md tracking-tight opacity-60">
@@ -70,7 +70,7 @@ const Education = () => {
         href="/assets/certificates/btech-certificate.pdf"
         target="_blank"
         className="mt-8"
-        cursorText="Open"
+        cursorText="View"
       >
         View Certificate
       </Button>
@@ -135,7 +135,7 @@ export const EducationSection = () => {
         <span>Education &</span>
         <br /> Certifications
       </h2>
-      <div className="mx-auto flex flex-col xl:flex-row justify-between gap-12 mt-8 lg:mt-14 w-full">
+      <div className="mx-auto flex flex-col xl:flex-row justify-between gap-8 mt-8 lg:mt-14 w-full">
         <Education />
         <div className="xl:hidden h-0.2 w-full bg-black/5"></div>
         <Certifications />

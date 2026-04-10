@@ -51,13 +51,13 @@ const Message = () => (
         Feel free to reach out to me via
       </span>
     </Copy>
-    <div className="flex justify-between w-[46%] 3xl:w-[28%] mx-auto">
+    <div className="flex justify-between w-[60%] md:w-[50%] lg:w-[70%] xl:w-[48%] 3xl:w-[28%] mx-auto">
       <Copy delay={0.7}>
         <button
           onClick={() =>
             (window.location.href = "mailto:nikhileshvarasala09@gmail.com")
           }
-          className="px-4 py-0 rounded-full text-sm lg:text-lg bg-black text-white cursor-pointer"
+          className="px-4 py-0 rounded-full text-sm lg:text-lg bg-black text-white cursor-pointer tracking-wider xl:tracking-normal"
         >
           Email{" "}
         </button>

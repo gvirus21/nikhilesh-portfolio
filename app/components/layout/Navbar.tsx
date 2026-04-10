@@ -23,12 +23,12 @@ export const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-2 bg-[#f5f5f5]">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-6 md:py-3 xl:py-2 bg-[#f5f5f5]">
       <div className="flex justify-between items-center w-full relative z-50">
         <div className="">
           <Link
             href="/"
-            className="text-xl lg:text-sm tracking-tighter uppercase"
+            className="text-sm md:text-base lg:text-sm tracking-tighter uppercase"
             onClick={() => setIsOpen(false)}
           >
             Nikhilesh Varasala
@@ -36,7 +36,7 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex gap-3 text-sm">
+        <div className="hidden md:flex gap-3 text-sm md:text-base">
           <Link
             href="mailto:nikhileshvarasala09@gmail.com"
             className="hover:text-black/50 active:text-slate-900 transition-colors"
@@ -61,33 +61,26 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Hamburger Button */}
-        <div className="lg:hidden flex items-center">
+        <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="focus:outline-none"
             aria-label="Toggle menu"
           >
-            {isOpen ? <Close size={32} /> : <Menu size={32} />}
+            {isOpen ? <Close size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Full-Screen Menu Overlay */}
       <div
-        className={`fixed inset-0 text-6xl tracking-tight h-screen backdrop-blur-sm shadow-2xl   bg-[#dfdfdf] z-40 lg:hidden flex flex-col pt-32 px-4 transition-all duration-500 ease-in-out ${
+        className={`fixed inset-0 text-2xl tracking-tight h-[32vh] backdrop-blur-xl shadow-2xl  bg-white z-40 lg:hidden flex flex-col pt-22 px-4 transition-all duration-500 ease-in-out ${
           isOpen
             ? "opacity-100 visible translate-y-0"
             : "opacity-0 invisible -translate-y-full"
         }`}
       >
-        <div className="flex flex-col gap-2 justify-between">
-          <Link
-            href="mailto:nikhileshvarasala09@gmail.com"
-            className="hover:text-blue-600 dark:hover:text-white transition-colors"
-            onClick={() => setIsOpen(false)}
-          >
-            E-MAIL
-          </Link>
+        <div className="relative flex justify-between items-center gap-10 text-2xl">
           <Link
             href="#"
             className="hover:text-blue-600 dark:hover:text-white transition-colors"
@@ -97,15 +90,23 @@ export const Navbar = () => {
           </Link>
           <Link
             href="#"
-            className="hover:text-blue-600 dark:hover:text-white transition-colors"
+            className="hover:text-blue-600 dark:hover:text-white transition-colors -ml-10"
             onClick={() => setIsOpen(false)}
           >
             GITHUB
           </Link>
+          <button
+            onClick={() =>
+              (window.location.href = "mailto:nikhileshvarasala09@gmail.com")
+            }
+            className="font-thin rounded-full text-lg py-2 px-8 border"
+          >
+            Email
+          </button>
         </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

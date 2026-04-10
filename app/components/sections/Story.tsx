@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export const Story = () => {
   return (
-    <div className="pt-32 lg:pt-40 max-w-400 mx-auto">
+    <div className="pt-24 lg:pt-40 max-w-400 mx-auto">
       <Copy delay={0.1}>
-        <h1 className="text-center text-7xl md:text-7xl lg:text-7xl 2xl:text-8xl tracking-[-4px] md:tracking-[-2px] leading-28 2xl:leading-36">
+        <h1 className="text-center text-6xl md:text-7xl lg:text-7xl 2xl:text-8xl tracking-[-3px] md:tracking-[-2px] leading-28 2xl:leading-36">
           My<span className="tracking-[-10px]"> </span>Story
         </h1>
       </Copy>
 
-      <div className="flex flex-col text-justify lg:text-justify mx-auto items-center mt-20 lg:mt-20 text-xl md:text-xl lg:text-2xl xl:text-2xl font-light leading-relaxed px-2">
-        <div className="w-full md:w-10/12 lg:w-10/12 xl:w-[60%] 2xl:w-[70%]">
+      <div className="flex flex-col text-justify lg:text-justify mx-auto items-center mt-8 lg:mt-20 text-lg md:text-xl lg:text-2xl xl:text-2xl font-light leading-relaxed px-2">
+        <div className="w-full md:w-9/12 lg:w-10/12 xl:w-[60%] 2xl:w-[70%]">
           <Copy delay={0.3}>
             <p className="">
               I’m a Data Analyst focused on turning raw data into business
