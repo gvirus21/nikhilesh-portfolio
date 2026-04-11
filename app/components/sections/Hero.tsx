@@ -25,7 +25,6 @@ export const Hero = () => {
             <DesktopView />
           </div>
 
-          {/* Placeholder Image */}
           <FadeIn
             delay={0.4}
             className="flex justify-center md:justify-end w-full md:w-8/12 lg:w-10/12 -mt-4 sm:mt-0 -z-10 md:z-0"

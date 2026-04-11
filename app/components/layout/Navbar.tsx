@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { HiOutlineMenuAlt4 as Menu } from "react-icons/hi";
 import { IoCloseOutline as Close } from "react-icons/io5";
+import { Button } from "../ui/Button";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,28 +37,36 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-3 text-sm md:text-xl">
+        <div className="hidden md:flex items-end justify-between gap-3 text-sm md:text-xl">
           <Link
             href="mailto:nikhileshvarasala09@gmail.com"
-            className="hover:text-black/50 active:text-slate-900 transition-colors"
+            className="hover:text-black/50 active:text-slate-900 pt-0.5 transition-colors"
             aria-label="Email"
           >
             E-MAIL
           </Link>
           <Link
             href="https://www.linkedin.com/in/nikhilesh-varasala/"
-            className="hover:text-black/50 active:text-slate-900  transition-colors"
+            className="hover:text-black/50 active:text-slate-900  pt-0.5 transition-colors"
             aria-label="LinkedIn"
           >
             LINKEDIN
           </Link>
           <Link
             href="https://github.com/Nikhilesh264"
-            className="hover:text-black/50 active:text-slate-900  transition-colors"
+            className="hover:text-black/50 active:text-slate-900  pt-0.5 transition-colors"
             aria-label="GitHub"
           >
             GITHUB
           </Link>
+
+          <Button
+            href="#projects"
+            className="text-xl bg-black/90 ml-4"
+            cursorText="Check"
+          >
+            Resume
+          </Button>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -89,30 +98,38 @@ export const Navbar = () => {
             : "opacity-0 invisible -translate-y-full"
         }`}
       >
-        <div className="relative flex justify-between items-center gap-10 text-2xl">
+        <div className="relative flex justify-between items-center text-2xl">
           <Link
             href="https://www.linkedin.com/in/nikhilesh-varasala/"
-            className="hover:text-blue-600 dark:hover:text-white transition-colors"
+            className="hover:text-blue-600 dark:hover:text-white pt-0.5 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             LINKEDIN
           </Link>
           <Link
             href="https://github.com/Nikhilesh264"
-            className="hover:text-blue-600 dark:hover:text-white transition-colors -ml-10"
+            className="hover:text-blue-600 dark:hover:text-white pt-0.5 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             GITHUB
           </Link>
-          <button
+          <Link
+            href="https://github.com/Nikhilesh264"
+            className="hover:text-blue-600 dark:hover:text-white pt-0.5 transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            EMAIL
+          </Link>
+        </div>
+
+        <button
             onClick={() =>
               (window.location.href = "mailto:nikhileshvarasala09@gmail.com")
             }
-            className="font-thin rounded-full text-lg py-2 px-8 border"
+            className="font-thin rounded-full text-lg py-2 px-8 border mt-10 bg-black text-white"
           >
-            Email
+            Download Resume
           </button>
-        </div>
       </div>
     </nav>
   );

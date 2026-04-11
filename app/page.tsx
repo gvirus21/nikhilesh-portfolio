@@ -14,6 +14,3 @@ export default function Home() {
     </main>
   );
 }
-
-// fix view projects button bug
-// mobile screen 

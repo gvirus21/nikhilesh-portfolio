@@ -3,6 +3,8 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import Copy from "../ui/Copy";
+import { Button } from "../ui/Button";
+
 
 export const Contact = () => {
   return (
@@ -37,47 +39,36 @@ const Heading = () => (
 );
 
 const Message = () => (
-  <div className="text-xl md:text-[3.5vw] lg:text-[3vw] xl:text-2xl 3xl:text-[1.6rem] tracking-tighter w-full lg:w-8/12 xl:w-[80%] 2xl:w-[85%] xl:leading-[140%] 2xl:leading-[120%] mt-14 xl:mt-16 2xl:mt-20 mx-auto text-justify">
-    <Copy delay={0.5}>
-      <span className="block text-center">I'm currently open for new </span>
-    </Copy>
+  <div className="flex flex-col items-center text-xl md:text-[3.5vw] lg:text-[3vw] xl:text-2xl 3xl:text-[1.6rem] tracking-tighter w-full lg:w-8/12 xl:w-[80%] 2xl:w-[85%] xl:leading-[140%] 2xl:leading-[120%] mt-14 xl:mt-16 2xl:mt-20 mx-auto text-justify">
     <Copy delay={0.5}>
       <span className="block text-center">
-        opportunities in Data Analytics.
+        Available for full-time opportunities.
       </span>
     </Copy>
-    <Copy delay={0.6}>
-      <span className="block text-center">
-        Feel free to reach out to me via
-      </span>
+    <Copy delay={0.5}>
+      <span className="block text-center">Let’s discuss how I can add</span>
     </Copy>
-    <div className="flex justify-between w-[68%] md:w-[50%] lg:w-[70%] xl:w-[48%] 3xl:w-[28%] mx-auto">
-      <Copy delay={0.7}>
-        <button
-          onClick={() =>
-            (window.location.href = "mailto:nikhileshvarasala09@gmail.com")
-          }
-          className="px-4 py-0 rounded-full text-sm lg:text-lg bg-black text-white cursor-pointer tracking-wider xl:tracking-normal"
-        >
-          Email{" "}
-        </button>
-      </Copy>
-      <Copy delay={0.8}>
-        <div className="inline text-center">to discuss further.</div>
-      </Copy>
-    </div>
+    <Copy delay={0.5}>
+      <span className="block text-center">value to your team.</span>
+    </Copy>
+
+    <Copy delay={0.7}>
+      <Button
+        href="mailto:nikhileshvarasala09@gmail.com"
+        className="mt-8 py-2 px-6 text-xl"
+        cursorText="Contact"
+      >
+        <div className="flex items-center gap-2">
+          <Mail size={18} />
+          <span>Email</span>
+        </div>
+      </Button>
+    </Copy>
   </div>
 );
 
 const ContactLinks = () => (
-  <div className="flex justify-center gap-6 mt-20">
-    <Link
-      href="mailto:nikhileshvarasala09@gmail.com"
-      className="text-gray-400 hover:hover:text-gray-600 transition-colors"
-    >
-      <Mail size={18} />
-      <span className="sr-only">Email</span>
-    </Link>
+  <div className="flex justify-center gap-6 mt-24">
     <Link
       href="https://www.linkedin.com/in/nikhilesh-varasala/"
       className="text-gray-400 hover:hover:text-gray-600 transition-colors"
