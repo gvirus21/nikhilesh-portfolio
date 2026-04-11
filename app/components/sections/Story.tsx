@@ -1,5 +1,6 @@
 import Copy from "../ui/Copy";
 import Image from "next/image";
+import FadeIn from "../animations/FadeIn";
 
 export const Story = () => {
   return (
@@ -40,14 +41,16 @@ export const Story = () => {
           </Copy>
         </div>
 
-        <div className="relative h-[30vh] md:h-[36vh] xl:h-[70vh] xl:max-h-140 2xl:max-h-180 bg-slate-400 aspect-16/8 2xl:aspect-18/9 mt-12 lg:mt-20 xl:mt-32 rounded-[12px] lg:rounded-[20px] xl:rounded-[16px] overflow-hidden">
-          <Image
-            src="/assets/images/about_image.JPG"
-            alt="About Nikhilesh"
-            fill
-            className="object-cover"
-          />
-        </div>
+        <FadeIn delay={0.4}>
+          <div className="relative h-[30vh] md:h-[36vh] xl:h-[70vh] xl:max-h-140 2xl:max-h-180 bg-slate-400 aspect-16/8 2xl:aspect-18/9 mt-12 lg:mt-20 xl:mt-32 rounded-[12px] lg:rounded-[20px] xl:rounded-[16px] overflow-hidden">
+            <Image
+              src="/assets/images/about_image.JPG"
+              alt="About Nikhilesh"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </FadeIn>
       </div>
     </div>
   );

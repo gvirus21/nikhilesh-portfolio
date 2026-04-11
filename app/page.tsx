@@ -1,4 +1,4 @@
-import { Hero, Story, EducationSection, Projects, Contact } from "./components/sections";
+import { Hero, Story, EducationSection, Projects, Contact, Skills } from "./components/sections";
 import { Navbar } from "./components/layout/Navbar";
 
 export default function Home() {
@@ -7,6 +7,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Story />
+      <Skills />
       <EducationSection />
       <Projects />
       <Contact />
