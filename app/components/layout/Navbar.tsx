@@ -61,7 +61,8 @@ export const Navbar = () => {
           </Link>
 
           <Button
-            href="#projects"
+            href="/assets/certificates/Nikhilesh_resume.pdf"
+            target="_blank"
             className="text-xl bg-black/90 ml-4"
             cursorText="Check"
           >
@@ -114,7 +115,7 @@ export const Navbar = () => {
             GITHUB
           </Link>
           <Link
-            href="https://github.com/Nikhilesh264"
+            href="mailto:nikhileshvarasala09@gmail.com"
             className="hover:text-blue-600 dark:hover:text-white pt-0.5 transition-colors"
             onClick={() => setIsOpen(false)}
           >
@@ -122,14 +123,14 @@ export const Navbar = () => {
           </Link>
         </div>
 
-        <button
-            onClick={() =>
-              (window.location.href = "mailto:nikhileshvarasala09@gmail.com")
-            }
-            className="font-thin rounded-full text-lg py-2 px-8 border mt-10 bg-black text-white"
-          >
-            Download Resume
-          </button>
+        <Link
+          href="/assets/certificates/Nikhilesh_resume.pdf"
+          target="_blank"
+          onClick={() => setIsOpen(false)}
+          className="font-thin text-center rounded-full text-lg py-2 px-8 border mt-10 bg-black text-white"
+        >
+          Download Resume
+        </Link>
       </div>
     </nav>
   );

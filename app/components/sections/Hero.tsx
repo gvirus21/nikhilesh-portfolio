@@ -70,7 +70,8 @@ const MobileView = () => (
         View Projects
       </a>
       <a
-        href="#projects"
+        href="/assets/certificates/Nikhilesh_resume.pdf"
+        target="_blank"
         className="inline-flex items-center justify-center w-full py-2.5 bg-transparen text-black border border-black text-base rounded-full mt-3"
       >
         Download Resume
@@ -101,7 +102,8 @@ const DesktopView = () => {
         </Copy>
         <Copy delay={0.8}>
           <Button
-            href="#projects"
+            href="/assets/certificates/Nikhilesh_resume.pdf"
+            target="_blank"
             className="xl:text-lg py-2 px-4  text-black bg-transparent mt-8 underline underline-offset-6 shadow-none hover:shadow-none"
             cursorText="Check"
           >
