@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCursor } from "@/app/components/providers/CursorProvider";
 
 import { useLenis } from "lenis/react";
+import { cn } from "@/app/utils/cn";
 
 interface ButtonProps {
   href: string;
@@ -16,7 +17,7 @@ interface ButtonProps {
 }
 
 export const Button = forwardRef<HTMLAnchorElement, ButtonProps>(
-  ({ href, children, className = "", cursorText = "Open", style, target }, ref) => {
+  ({ href, children, className, cursorText = "Open", style, target }, ref) => {
     const { setCursorActive, setCursorText } = useCursor();
     const lenis = useLenis();
 
@@ -49,7 +50,10 @@ export const Button = forwardRef<HTMLAnchorElement, ButtonProps>(
           setCursorActive(false);
           setCursorText("");
         }}
-        className={`inline-block text-sm bg-black text-white px-4 py-1 rounded-full transition-all duration-100 ease-in hover:-translate-y-0.5 active:translate-y-0.5 shadow-sm hover:shadow-md ${className}`}
+        className={cn(
+          "inline-block text-sm bg-black text-white px-4 py-1 rounded-full transition-all duration-100 ease-in hover:-translate-y-0.5 active:translate-y-0.5 shadow-sm hover:shadow-md",
+          className
+        )}
       >
         {children}
       </Link>
